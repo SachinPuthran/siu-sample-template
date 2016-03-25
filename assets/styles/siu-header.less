@@ -1,0 +1,81 @@
+@import "variables";
+
+header {
+  top: 0;
+  position: fixed;
+  background-color: @siu-orange;
+  z-index: 5;
+  box-shadow: 0 1px 7px rgb(136, 136, 136);
+  width: 100%;
+  text-align: left;
+  height: 40px;
+  @media @giants {
+    height: 65px;
+  }
+
+  section.logo-container {
+    height: 90%;
+    position: absolute;
+    margin-top: 3px;
+    left: 1%;
+    z-index: 10;
+
+    a {
+      border: 0;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border: 0;
+      }
+    }
+  }
+
+  section.search-container {
+    position: absolute;
+    padding: 6px 1%;
+    right: 0;
+    width: 32%;
+    margin: 0;
+    display: inline-flex;
+
+    @media @tablets {
+      width: 15%;
+    }
+    @media @desktops {
+      width: 10%;
+    }
+    #searchBtn, #notificationBell, #profileLink {
+      width: 33%;
+      color: white;
+      cursor: pointer;
+      i {
+        font-size: 22px;
+        padding: 5px 0;
+        @media @giants {
+          font-size: 45px;
+        }
+      }
+      img {
+        width: 75%;
+        border-radius: 20px;
+        @media @tablets {
+          width: 95%;
+        }
+        @media @largescreen {
+          width: 75%;
+        }
+      }
+    }
+  }
+
+  section.responsiveMenu {
+    position: absolute;
+    left: 14%;
+    color: white;
+    top: -8px;
+
+    @media @tablets {
+      display: none;
+    }
+  }
+}

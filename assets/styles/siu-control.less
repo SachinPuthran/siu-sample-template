@@ -1,0 +1,191 @@
+@import "variables";
+
+section.control-bar {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: @siu-control;
+
+  @media @tablets {
+    width: 24%;
+  }
+  @media @desktops {
+    width: 18%;
+  }
+  @media @giants {
+    width: 14%;
+  }
+
+  nav.headerNav {
+    padding-top: 60px;
+    a[data-nav] {
+      font-family: 'Nobile', helvetica, arial, serif;
+      color: @siu-gray;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: left;
+      font-weight: 400;
+      font-size: 13px;
+      padding: 17px 0 0 40px;
+      display: block;
+
+      @media @tablets {
+        padding: 17px 0 0 20px;
+      }
+      @media @largescreen {
+        padding: 17px 0 0 40px;
+      }
+
+      @media @giants {
+        font-size: 20px;
+      }
+      i {
+        width: 15px;
+        @media @giants {
+          width: 25px;
+        }
+      }
+    }
+  }
+
+  * > label {
+    text-transform: uppercase;
+    color: @siu-label-gray;
+    padding-left: 40px;
+    font-size: 8px;
+    font-weight: 200;
+    width: 100%;
+    @media @tablets {
+      padding-left: 20px;
+    }
+    @media @largescreen {
+      padding-left: 40px;
+    }
+    @media @giants {
+      font-size: 14px;
+    }
+    i {
+      padding-right: 50%;
+      float: right;
+      font-size: 10px;
+      color: @siu-gray;
+      @media @tablets {
+        padding-right: 20%;
+      }
+      @media @giants {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .friendsList {
+    padding-top: 40px;
+    .friend {
+      //display: inline-flex;
+      padding: 10px 0 0 40px;
+      @media @tablets {
+        padding: 10px 0 0 20px;
+      }
+      @media @largescreen {
+        padding: 10px 0 0 40px;
+      }
+      img {
+        width: 10%;
+        height: 10%;
+        border-radius: 40px;
+        @media @tablets {
+          width: 25%;
+          height: 25%;
+        }
+      }
+      .nameTitle {
+        display: inline-flex;
+        color: @siu-gray;
+        span.name {
+          margin-left: 10px;
+          margin-top: -3px;
+          white-space: nowrap;
+
+          @media @giants {
+            margin-left: 18px;
+            margin-top: 5px;
+            font-size: 21px;
+          }
+        }
+        span.title {
+          white-space: nowrap;
+          margin-top: 12px;
+          margin-left: -95px;
+          color: @siu-label-gray;
+          font-size: 11px;
+          font-weight: 500;
+
+          @media @giants {
+            margin-top: 27px;
+            margin-left: -144px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 23px 20px;
+    section.sub-footer {
+      border-top: 1px solid rgb(48, 53, 58);
+      position: absolute;
+      bottom: 30px;
+      padding: 10px 45px;
+      @media @tablets {
+        padding: 0;
+        bottom: 40px;
+      }
+      @media @largescreen {
+        padding: 20px;
+        bottom: 25px;
+      }
+      @media @giants {
+        bottom: 50px;
+      }
+      a {
+        color: @siu-label-gray;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0 10px;
+        @media @tablets {
+          padding: 0 5px;
+          font-size: 10px;
+        }
+        @media @largescreen {
+          font-size: 12px;
+        }
+        @media @giants {
+          font-size: 21px;
+        }
+      }
+    }
+    section.copyright {
+      color: @siu-label-gray;
+      position: absolute;
+      bottom: 20px;
+      font-weight: 600;
+      padding-left: 73px;
+      font-size: 11px;
+      @media @tablets {
+        padding-left: 17px;
+        font-size: 9px;
+      }
+      @media @largescreen {
+        padding-left: 30px;
+        font-size: 11px;
+      }
+      @media @giants {
+        bottom: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+}
